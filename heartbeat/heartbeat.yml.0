@@ -1,0 +1,22 @@
+cloud.id: ""
+cloud.auth: "elastic:<password>"
+
+heartbeat.config.monitors:
+  path: ${path.config}/monitors.d/*.yml
+  reload.enabled: false
+  reload.period: 5s
+
+heartbeat.monitors:
+- type: http
+  name: "elasticsearch"
+  urls: ["http://localhost:9200"]
+  schedule: '@every 30s'
+
+setup.template.settings:
+  index.number_of_shards: 1
+  index.codec: best_compression
+
+setup.kibana:
+
+processors:
+  - add_observer_metadata:
