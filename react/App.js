@@ -7,7 +7,7 @@ import { init as initApm } from '@elastic/apm-rum'
 var apmRUM = initApm({
 
   // Set required service name (allowed characters: a-z, A-Z, 0-9, -, _, and space)
-  serviceName: 'busqueda-react',
+  serviceName: 'busqueda-ui',
   distributedTracingOrigins: ['<TU_URL_DE_STRIGO>:8200'],
   // Set custom APM Server URL (default: http://localhost:8200)
   serverUrl: '<TU SERVER_URL>',
