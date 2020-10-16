@@ -8,7 +8,7 @@ var apmRUM = initApm({
 
   // Set required service name (allowed characters: a-z, A-Z, 0-9, -, _, and space)
   serviceName: 'busqueda-react',
-  distributedTracingOrigins: ['<TU_URL_DE_STRIGO':8200'],
+  distributedTracingOrigins: ['<TU_URL_DE_STRIGO>:8200'],
   // Set custom APM Server URL (default: http://localhost:8200)
   serverUrl: '<TU SERVER_URL>',
   //serverUrl: 'http://ec2-18-192-63-235.eu-central-1.compute.amazonaws.com:8200',
@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     setAppState({ loading: true });
     //const apiUrl = `http://localhost:9200/clientes/_search?q=nombre:${terminos}&filter_path=hits.hits`;
-    const apiUrl = `http://ec2-18-192-63-235.eu-central-1.compute.amazonaws.com:8200/busca?terminos=${terminos}`;
+    const apiUrl = `<TU_URL_DE_STRIGO>:8200/busca?terminos=${terminos}`;
     console.log('apiUrl: ' + apiUrl);
     fetch(apiUrl)
       .then((res) => res.json())
