@@ -2,23 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { withTransaction } from '@elastic/apm-rum-react'
 import './App.css';
 import List from './components/List';
-import withListLoading from './components/withListLoading';
 import { init as initApm } from '@elastic/apm-rum'
 
 var apmRUM = initApm({
 
   // Set required service name (allowed characters: a-z, A-Z, 0-9, -, _, and space)
   serviceName: 'busqueda-react',
-  distributedTracingOrigins: ['http://ec2-18-192-63-235.eu-central-1.compute.amazonaws.com:8200'],
+  distributedTracingOrigins: ['<TU_URL_DE_STRIGO':8200'],
   // Set custom APM Server URL (default: http://localhost:8200)
-  serverUrl: 'https://555553a8492e4fe2a7f58be2dc390c79.apm.us-central1.gcp.cloud.es.io:443',
+  serverUrl: '<TU SERVER_URL>',
   //serverUrl: 'http://ec2-18-192-63-235.eu-central-1.compute.amazonaws.com:8200',
   // Set service version (required for source map feature)
   serviceVersion: '1.0'
 })
 
 function App() {
-  const ListLoading = withListLoading(List);
   const [appState, setAppState] = useState({
     loading: false,
     clientes: null
