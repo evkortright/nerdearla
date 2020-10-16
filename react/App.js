@@ -58,4 +58,4 @@ function App() {
   )
 }
 
-export default withTransaction('busqueda-react', 'component')(App);
+export default withTransaction('busqueda-ui-tx', 'component')(App);
