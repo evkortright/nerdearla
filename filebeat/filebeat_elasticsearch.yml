@@ -3,26 +3,26 @@
     enabled: true
 
     var.paths:
-      - /home/elastic/elasticsearch-7.9.2/logs/*_server.json
+      - /home/elastic/elasticsearch-7.9.3/logs/*_server.json
 
   gc:
     enabled: true
     var.paths:
-      - /home/elastic/elasticsearch-7.9.2/logs/gc.log.[0-9]*
-      - /home/elastic/elasticsearch-7.9.2/logs/gc.log
+      - /home/elastic/elasticsearch-7.9.3/logs/gc.log.[0-9]*
+      - /home/elastic/elasticsearch-7.9.3/logs/gc.log
 
   audit:
     enabled: true
     var.paths:
-      - /home/elastic/elasticsearch-7.9.2/logs/*_audit.json
+      - /home/elastic/elasticsearch-7.9.3/logs/*_audit.json
 
   slowlog:
     enabled: true
     var.paths:
-       - /home/elastic/elasticsearch-7.9.2/logs/*_index_search_slowlog.json
-       - /home/elastic/elasticsearch-7.9.2/logs/*_index_indexing_slowlog.json
+       - /home/elastic/elasticsearch-7.9.3/logs/*_index_search_slowlog.json
+       - /home/elastic/elasticsearch-7.9.3/logs/*_index_indexing_slowlog.json
 
   deprecation:
     enabled: true
     var.paths:
-       - /home/elastic/elasticsearch-7.9.2/logs/*_deprecation.json
+       - /home/elastic/elasticsearch-7.9.3/logs/*_deprecation.json
